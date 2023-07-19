@@ -1,0 +1,56 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@date-io/date-fns": "^2.16.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.0",
+    "@mui/styled-engine-sc": "^5.12.0",
+    "@mui/x-date-pickers": "^6.10.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/date-fns": "^2.6.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "date-fns": "^2.30.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.8.0",
+    "react-scripts": "^5.0.1",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.14.1",
+    "styled-components": "^5.3.1",
+    "web-vitals": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false --detectOpenHandles",
+    "eject": "react-scripts eject",
+    "install-backend": "cd backend && npm install",
+    "install-both": "npm install & npm run install-backend",
+    "backend": "cd backend && node server.js",
+    "start-both": "npm run backend & npm start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
