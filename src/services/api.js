@@ -28,15 +28,3 @@ export const createUser = async (username, password) => {
         console.log(e);
     }
 }
-
-Axios({
-    method: "POST",
-    url: "http://localhost:8080/item",
-    data: {jsonObject},
-    headers: {
-      "Content-Type": "application/json"
-    },
-    withCredentials: true
-  }).then(res => {
-    console.log(res.data.message);
-  });
