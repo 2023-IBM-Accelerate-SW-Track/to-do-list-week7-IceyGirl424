@@ -29,7 +29,7 @@ export const createUser = async (username, password) => {
     }
 }
 
-axios({
+Axios({
     method: "POST",
     url: "http://localhost:8080/item",
     data: {jsonObject},

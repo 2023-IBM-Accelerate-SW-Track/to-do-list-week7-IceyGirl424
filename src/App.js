@@ -1,23 +1,24 @@
-import React from 'react';
+import * as api from './services/api';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavbarComp from './component/navigation/NavbarComp';
-import * as api from './services/api';
-import React, { useState } from 'react';
 
-const [authenticated, setAuthenticated] = useState(false);
-const [username, setUsername] = useState();
-const [password, setPassword] = useState();
 
-const authUser = async () => {
-   setAuthenticated(await api.authenticate(username, password));
-}
+function App() {
+  const [authenticated, setAuthenticated] = useState(false);
+  const [username, setUsername] = useState();
+  const [password, setPassword] = useState();
 
-const createUser = async () => {
-    await api.createUser(username, password);
-}
+  const authUser = async () => {
+      setAuthenticated(await api.authenticate(username, password));
+  }
 
-return (
+  const createUser = async () => {
+      await api.createUser(username, password);
+  }
+
+  return (
     <div className="App">
         {!authenticated ? (
             <div>
@@ -44,4 +45,7 @@ return (
             </div>
         )}
     </div>
-);
+  );
+}
+
+export default App;
